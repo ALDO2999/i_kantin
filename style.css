@@ -152,11 +152,92 @@
 
    
 
-   #logo {
-    font-size: 24px;
-    color: gold;
+  
+  .sup {
+    font-size: 13px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #000000;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+    text-align: right;
   }
   
+  .sup::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffea06;
+    transition: .5s ease;
+  }
+  
+  .sup:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+  }
+  
+  .sup:hover::before {
+    width: 10%;
+  }
+  
+  .sup::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffeb49;
+    transition: .4s ease;
+    z-index: -1;
+  }
+  
+  .sup:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: ffeb49;
+  }
+  
+
+  .bin input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+
+  
+  .bin {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .bin svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    transition: all 0.3s;
+    fill: #666;
+  }
+  
+  .bin svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .bin input:checked ~ svg {
+    fill: #ffeb49;
+  }
   
 
 

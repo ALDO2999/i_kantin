@@ -79,7 +79,7 @@ class Jumlah extends Produk {
         echo "<br>";
         echo "<br>";
 
-        echo "berikan kami bintang :";
+        echo "TERIMAKASIH "  ;
 
 
         echo "<br>";
